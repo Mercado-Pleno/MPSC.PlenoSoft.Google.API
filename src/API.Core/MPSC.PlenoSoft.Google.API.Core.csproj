@@ -7,8 +7,8 @@
     <ProjectGuid>{2162B34D-74B6-46FD-9758-D9D71492C530}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MPSC.PlenoSoft.Google.API</RootNamespace>
-    <AssemblyName>MPSC.PlenoSoft.Google.API</AssemblyName>
+    <RootNamespace>MPSC.PlenoSoft.Google.API.Core</RootNamespace>
+    <AssemblyName>MPSC.PlenoSoft.Google.API.Core</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

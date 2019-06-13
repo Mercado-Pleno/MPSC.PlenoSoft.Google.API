@@ -55,9 +55,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\API.Core\MPSC.PlenoSoft.Google.API.csproj">
+    <ProjectReference Include="..\API.Core\MPSC.PlenoSoft.Google.API.Core.csproj">
       <Project>{2162b34d-74b6-46fd-9758-d9d71492c530}</Project>
-      <Name>MPSC.PlenoSoft.Google.API</Name>
+      <Name>MPSC.PlenoSoft.Google.API.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
