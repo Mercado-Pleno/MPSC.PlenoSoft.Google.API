@@ -13,8 +13,8 @@ namespace MPSC.PlenoSoft.Google.API.Maps.DTO
 		public String Status { get; set; } = "Error";
 
 
-		public Row FirstRow => Rows?.FirstOrDefault() ?? new Row();
-		public Record Distance => FirstRow.FirstElement.Distance ?? new Record();
-		public Record Duration => FirstRow.FirstElement.Duration ?? new Record();
+		public Row FirstRow { get { return Rows?.FirstOrDefault() ?? new Row(); } }
+		public Record Distance { get { return FirstRow.FirstElement.Distance ?? new Record(); } }
+		public Record Duration { get { return FirstRow.FirstElement.Duration ?? new Record(); } }
 	}
 }

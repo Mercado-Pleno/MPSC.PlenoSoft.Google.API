@@ -46,6 +46,6 @@ namespace MPSC.PlenoSoft.Google.API.Maps
 			return new Uri(apiUrl + Parameters);
 		}
 
-		private String Parameters => "&" + String.Join("&", _parameters.Select(d => $"{d.Key}={d.Value}"));
+		private String Parameters { get { return "&" + String.Join("&", _parameters.Select(d => $"{d.Key}={d.Value}")); } }
 	}
 }

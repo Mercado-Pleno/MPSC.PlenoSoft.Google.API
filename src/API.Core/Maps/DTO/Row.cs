@@ -9,6 +9,6 @@ namespace MPSC.PlenoSoft.Google.API.Maps.DTO
 	{
 		public IEnumerable<Element> Elements { get; set; } = new List<Element>();
 
-		public Element FirstElement => Elements?.FirstOrDefault() ?? new Element();
+		public Element FirstElement { get { return Elements?.FirstOrDefault() ?? new Element(); } }
 	}
 }
