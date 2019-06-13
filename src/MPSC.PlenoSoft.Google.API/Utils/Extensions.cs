@@ -6,14 +6,14 @@ namespace MPSC.PlenoSoft.Google.API.Utils
 {
 	public static class Extensions
 	{
-		public static String GetContentFrom(this Uri uri)
+		public static String GetContent(this Uri uri)
 		{
 			var webRequest = WebRequest.Create(uri);
 			using (var webResponse = webRequest.GetResponse())
 			{
 				try
 				{
-					return webResponse.GetResponseStream().ReadAllString();
+					return ReadAllString(webResponse.GetResponseStream());
 				}
 				finally
 				{

@@ -14,8 +14,7 @@ namespace MPSC.PlenoSoft.Google.API.Maps.DTO
 
 
 		public Row FirstRow => Rows?.FirstOrDefault() ?? new Row();
-		public Element FirstElement => FirstRow.Elements?.FirstOrDefault() ?? new Element();
-		public Record Distance => FirstElement.Distance ?? new Record();
-		public Record Duration => FirstElement.Duration ?? new Record();
+		public Record Distance => FirstRow.FirstElement.Distance ?? new Record();
+		public Record Duration => FirstRow.FirstElement.Duration ?? new Record();
 	}
 }

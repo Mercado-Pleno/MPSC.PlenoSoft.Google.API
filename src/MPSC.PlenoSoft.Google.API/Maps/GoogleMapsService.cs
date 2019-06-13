@@ -7,17 +7,17 @@ namespace MPSC.PlenoSoft.Google.API.Maps
 {
 	public class GoogleMapsService
 	{
-		private const String apiUrlPattern = "https://maps.googleapis.com/maps/api/distancematrix/json?key={apiKey}&origins={origins}&destinations={destinations}&mode={mode}&language={language}&sensor={sensor}";
+		private const String apiUrlPattern = "https://maps.googleapis.com/maps/api/distancematrix/json?key={apiKey}&origins={origins}&destinations={destinations}&mode={mode}&language={language}{aditionalParameters}";
 		private static String mode = "driving";
 		private static String language = "pt-BR";
-		private static String sensor = "false+CA";
+		private static String aditionalParameters = "";
 		private readonly String _apiKey;
 
 		public GoogleMapsService(String apiKey) { _apiKey = apiKey; }
 
-		public DistanceMatrix GetDistanceMatrix(String origins, String destinations, String apiKey = null)
+		public DistanceMatrix GetDistanceMatrix(String origins, String destinations, String alternativeApiKey = null)
 		{
-			var jsonString = GetDistanceMatrixFromApi(origins, destinations, apiKey ?? _apiKey);
+			var jsonString = GetDistanceMatrixFromApi(origins, destinations, alternativeApiKey ?? _apiKey);
 			var distanceMatrix = JsonConvert.DeserializeObject<DistanceMatrix>(jsonString);
 			return distanceMatrix ?? new DistanceMatrix();
 		}
@@ -25,7 +25,7 @@ namespace MPSC.PlenoSoft.Google.API.Maps
 		private String GetDistanceMatrixFromApi(String origins, String destinations, String apiKey)
 		{
 			var apiUri = GetApiUri(origins, destinations, apiKey);
-			return apiUri.GetContentFrom();
+			return apiUri.GetContent();
 		}
 
 		private Uri GetApiUri(String origins, String destinations, String apiKey)
@@ -36,7 +36,7 @@ namespace MPSC.PlenoSoft.Google.API.Maps
 				.Replace("{destinations}", destinations)
 				.Replace("{mode}", mode)
 				.Replace("{language}", language)
-				.Replace("{sensor}", sensor)
+				.Replace("{aditionalParameters}", aditionalParameters)
 			;
 			return new Uri(apiUrl);
 		}
