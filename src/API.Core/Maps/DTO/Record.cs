@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MPSC.PlenoSoft.Google.API.Maps.DTO
+namespace MPSC.PlenoSoft.Google.API.Core.Maps.DTO
 {
 	[Serializable]
 	public class Record

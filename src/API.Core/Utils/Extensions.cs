@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 
-namespace MPSC.PlenoSoft.Google.API.Utils
+namespace MPSC.PlenoSoft.Google.API.Core.Utils
 {
 	public static class Extensions
 	{

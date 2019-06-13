@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MPSC.PlenoSoft.Google.API.Maps;
+using MPSC.PlenoSoft.Google.API.Core.Maps;
 using System;
 
 namespace MPSC.PlenoSoft.Google.API.Testes.Maps

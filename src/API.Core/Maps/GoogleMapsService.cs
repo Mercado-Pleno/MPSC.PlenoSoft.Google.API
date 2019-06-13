@@ -1,11 +1,11 @@
-﻿using MPSC.PlenoSoft.Google.API.Maps.DTO;
-using MPSC.PlenoSoft.Google.API.Utils;
+﻿using MPSC.PlenoSoft.Google.API.Core.Maps.DTO;
+using MPSC.PlenoSoft.Google.API.Core.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MPSC.PlenoSoft.Google.API.Maps
+namespace MPSC.PlenoSoft.Google.API.Core.Maps
 {
 	/// <summary>
 	/// https://developers.google.com/maps/documentation/distance-matrix/start

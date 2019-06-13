@@ -1,4 +1,4 @@
-﻿using MPSC.PlenoSoft.Google.API.Maps;
+﻿using MPSC.PlenoSoft.Google.API.Core.Maps;
 using System.Linq;
 
 namespace MPSC.PlenoSoft.Google.API.Console
