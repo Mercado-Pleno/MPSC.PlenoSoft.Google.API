@@ -12,7 +12,10 @@ namespace MPSC.PlenoSoft.Google.API.Maps.DTO
 		public IEnumerable<Row> Rows { get; set; } = new List<Row>();
 		public String Status { get; set; } = "Error";
 
-		public Record Distance => Rows?.FirstOrDefault()?.Elements?.FirstOrDefault()?.Distance ?? new Record();
-		public Record Duration => Rows?.FirstOrDefault()?.Elements?.FirstOrDefault()?.Duration ?? new Record();
+
+		public Row FirstRow => Rows?.FirstOrDefault() ?? new Row();
+		public Element FirstElement => FirstRow.Elements?.FirstOrDefault() ?? new Element();
+		public Record Distance => FirstElement.Distance ?? new Record();
+		public Record Duration => FirstElement.Duration ?? new Record();
 	}
 }
