@@ -2,18 +2,26 @@
 using MPSC.PlenoSoft.Google.API.Utils;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MPSC.PlenoSoft.Google.API.Maps
 {
+	/// <summary>
+	/// https://developers.google.com/maps/documentation/distance-matrix/start
+	/// </summary>
 	public class GoogleMapsService
 	{
-		private const String apiUrlPattern = "https://maps.googleapis.com/maps/api/distancematrix/json?key={apiKey}&origins={origins}&destinations={destinations}&mode={mode}&language={language}{aditionalParameters}";
-		private static String mode = "driving";
-		private static String language = "pt-BR";
-		private static String aditionalParameters = "";
+		private const String apiUrlPattern = "https://maps.googleapis.com/maps/api/distancematrix/json?key={apiKey}&origins={origins}&destinations={destinations}";
+		private readonly Dictionary<String, String> _parameters;
 		private readonly String _apiKey;
 
-		public GoogleMapsService(String apiKey) { _apiKey = apiKey; }
+		public GoogleMapsService(String apiKey, String travelMode = "driving", String language = "pt-BR", IEnumerable<KeyValuePair<String, String>> parameters = null)
+		{
+			_apiKey = apiKey;
+			_parameters = new Dictionary<String, String> { { "mode", travelMode }, { "language", language } };
+			_parameters.Merge(parameters);
+		}
 
 		public DistanceMatrix GetDistanceMatrix(String origins, String destinations, String alternativeApiKey = null)
 		{
@@ -34,11 +42,10 @@ namespace MPSC.PlenoSoft.Google.API.Maps
 				.Replace("{apiKey}", apiKey)
 				.Replace("{origins}", origins)
 				.Replace("{destinations}", destinations)
-				.Replace("{mode}", mode)
-				.Replace("{language}", language)
-				.Replace("{aditionalParameters}", aditionalParameters)
 			;
-			return new Uri(apiUrl);
+			return new Uri(apiUrl + Parameters);
 		}
+
+		private String Parameters => "&" + String.Join("&", _parameters.Select(d => $"{d.Key}={d.Value}"));
 	}
 }

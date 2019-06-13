@@ -15,8 +15,8 @@ namespace MPSC.PlenoSoft.Google.API.Testes.Maps
 			var googleMapsService = new GoogleMapsService(apiKey: cApiKey);
 
 			var distanceMatrix = googleMapsService.GetDistanceMatrix(
-				origins: "Niterói rj",
-				destinations: "Rio de Janeiro rj"
+				origins: "Niterói - RJ",
+				destinations: "Rio de Janeiro - RJ"
 			);
 
 			Assert.IsNotNull(distanceMatrix);

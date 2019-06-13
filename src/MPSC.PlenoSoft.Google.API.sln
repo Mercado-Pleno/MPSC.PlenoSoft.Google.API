@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPSC.PlenoSoft.Google.API", "MPSC.PlenoSoft.Google.API\MPSC.PlenoSoft.Google.API.csproj", "{2162B34D-74B6-46FD-9758-D9D71492C530}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPSC.PlenoSoft.Google.API", "API.Core\MPSC.PlenoSoft.Google.API.csproj", "{2162B34D-74B6-46FD-9758-D9D71492C530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPSC.PlenoSoft.Google.API.Testes", "MPSC.PlenoSoft.Google.API.Testes\MPSC.PlenoSoft.Google.API.Testes.csproj", "{47F30DAE-3913-4BFC-A8DA-9591F15466E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPSC.PlenoSoft.Google.API.Testes", "API.Testes\MPSC.PlenoSoft.Google.API.Testes.csproj", "{47F30DAE-3913-4BFC-A8DA-9591F15466E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPSC.PlenoSoft.Google.API.Console", "API.Console\MPSC.PlenoSoft.Google.API.Console.csproj", "{C785AFC7-2110-45DE-B0DD-A10136158231}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{47F30DAE-3913-4BFC-A8DA-9591F15466E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47F30DAE-3913-4BFC-A8DA-9591F15466E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47F30DAE-3913-4BFC-A8DA-9591F15466E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C785AFC7-2110-45DE-B0DD-A10136158231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C785AFC7-2110-45DE-B0DD-A10136158231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C785AFC7-2110-45DE-B0DD-A10136158231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C785AFC7-2110-45DE-B0DD-A10136158231}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
